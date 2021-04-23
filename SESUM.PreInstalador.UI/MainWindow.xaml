@@ -16,28 +16,29 @@
 
         </Canvas>
         <!-- Fim Cabeçalho-->
+        
         <!-- Instruções -->
-        <StackPanel Width="260"
+        <StackPanel Width="350"
                     HorizontalAlignment="Left"
                     Margin="50,0,0,0">
             <StackPanel.Resources>
-                <Style TargetType="{x:Type TextBox}">
+                <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="FontFamily" Value="Arial"/>
                     <Setter Property="FontSize" Value="12"/>
-                    
+                    <Setter Property="TextWrapping" Value="Wrap"/>
+                    <Setter Property="Margin" Value="5"/>
                 </Style>
 
             </StackPanel.Resources>
 
-            <TextBlock
-                TextWrapping="Wrap" FontFamily="Arial" >
+            <TextBlock>
                 Esta instalação pode ser feita através da rede
                 ou manualmente com um conjunto de disquetes.
 
             </TextBlock>
             <TextBlock>
             Selecione "Instalação via Rede(FTP) e clique em 
-                avançar para obter a lista dos programs disponíveis
+                "Avançar>" para obter a lista dos programs disponíveis
                 na rede.
 
             </TextBlock>
@@ -50,23 +51,40 @@
         <!-- Fim Instruções-->
 
         <!-- Opções -->
-        <StackPanel>
-
+        <StackPanel HorizontalAlignment="Left"
+                     Margin="50,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="RadioButton">
+                    <Setter Property="FontFamily" Value="Arial"/>
+                    <Setter Property="Margin" Value="8" />
+                </Style>
+            </StackPanel.Resources>
+            <RadioButton Content="Instalação via Rede(FTP)"/>
+            <RadioButton Content="Através do CD-ROM (Drive E:)"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Content="Outro: "/>
+                <TextBox Width="200"
+                         Height="25"/>
+                <Button Content="Procurar"
+                        Height="25"
+                        Width="70"/>
+            </StackPanel>
         </StackPanel>
         <!-- Fim Opções-->
 
         <!-- Botões de Ação-->
         <StackPanel Orientation="Horizontal" 
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Right"
+                    Margin="0,30,10,0">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Padding" Value="4"/>
-                    <Setter Property="Width" Value="60"/>
+                    <Setter Property="Width" Value="70"/>
                     <Setter Property="Margin" Value="5"/>
                 </Style>
             </StackPanel.Resources>
-            <Button Content="OK"/>
-            <Button Content="Avançar"/>
+            <Button Content="&lt; Voltar"/>
+            <Button Content="Avançar &gt;"/>
             <Button Content="Finalizar"/>
         </StackPanel>
         <!-- Botões de Ação-->
