@@ -12,9 +12,13 @@
 
     <StackPanel Background="#FFCCCCCC">
         <!-- Cabeçalho-->
-        <Canvas>
+        <Grid
+            Height="200">
+            <Canvas>
 
-        </Canvas>
+            </Canvas>
+        </Grid>
+       
         <!-- Fim Cabeçalho-->
         
         <!-- Instruções -->
