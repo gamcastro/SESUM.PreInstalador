@@ -12,9 +12,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SESUM.PreInstalador.UI", "SESUM.PreInstalador.UI\SESUM.PreInstalador.UI.csproj", "{C96ECDA5-38E2-4A57-93E9-B0FFAC5F5C80}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C96ECDA5-38E2-4A57-93E9-B0FFAC5F5C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96ECDA5-38E2-4A57-93E9-B0FFAC5F5C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96ECDA5-38E2-4A57-93E9-B0FFAC5F5C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96ECDA5-38E2-4A57-93E9-B0FFAC5F5C80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C96ECDA5-38E2-4A57-93E9-B0FFAC5F5C80} = {CBE4477B-9C9F-4B95-8EE8-868B1C2D343B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE1818E8-2022-43A8-A22F-631630EC916D}

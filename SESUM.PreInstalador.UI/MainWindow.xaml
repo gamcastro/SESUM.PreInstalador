@@ -5,8 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SESUM.PreInstalador.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="490.179" Width="526.786">
+
+    <StackPanel Background="#FFCCCCCC">
+        <!-- Cabeçalho-->
+        <Canvas>
+
+        </Canvas>
+        <!-- Fim Cabeçalho-->
+        <!-- Instruções -->
+        <StackPanel Width="260"
+                    HorizontalAlignment="Left"
+                    Margin="50,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="FontFamily" Value="Arial"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    
+                </Style>
+
+            </StackPanel.Resources>
+
+            <TextBlock
+                TextWrapping="Wrap" FontFamily="Arial" >
+                Esta instalação pode ser feita através da rede
+                ou manualmente com um conjunto de disquetes.
+
+            </TextBlock>
+            <TextBlock>
+            Selecione "Instalação via Rede(FTP) e clique em 
+                avançar para obter a lista dos programs disponíveis
+                na rede.
+
+            </TextBlock>
+            <TextBlock>
+            Para instalar  via disquete, insira o primeiro disquete
+                no leitor de disquetes do micro(Drive A:), selecione
+                "Através de disquete(Drive A:), e clique em "Avançar >".
+            </TextBlock>
+        </StackPanel>
+        <!-- Fim Instruções-->
+
+        <!-- Opções -->
+        <StackPanel>
+
+        </StackPanel>
+        <!-- Fim Opções-->
+
+        <!-- Botões de Ação-->
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Right">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Padding" Value="4"/>
+                    <Setter Property="Width" Value="60"/>
+                    <Setter Property="Margin" Value="5"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="OK"/>
+            <Button Content="Avançar"/>
+            <Button Content="Finalizar"/>
+        </StackPanel>
+        <!-- Botões de Ação-->
+    </StackPanel>
 </Window>
