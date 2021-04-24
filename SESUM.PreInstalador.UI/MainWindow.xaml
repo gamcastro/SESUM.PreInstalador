@@ -8,19 +8,57 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="490.179" Width="526.786">
+        Title="MainWindow" Height="456.179" Width="526.786">
 
     <StackPanel Background="#FFCCCCCC">
         <!-- Cabeçalho-->
         <Grid
-            Height="200">
+           Height="140">
             <Canvas>
-
+                <Rectangle Height="68" Stroke="Black" Width="526.786">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush    
+                            EndPoint="0.5,1" StartPoint="0.5,0" >
+                            <GradientStop Color="#FFE0F3DE" Offset="0" />
+                            <GradientStop Color="#FF6D896A" Offset="1" />
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                    <Rectangle.Effect>
+                        <DropShadowEffect />
+                    </Rectangle.Effect>
+                </Rectangle>
+                <Image Source="/Recursos/sisrevisado.png"
+                       Height="124.51"
+                       Width="118" Canvas.Left="10" 
+                       Canvas.Top="11.228" />
+                <TextBlock
+                    FontFamily="Arial"
+                    FontSize="20" 
+                    Canvas.Left="120" Canvas.Top="9.228">
+                    Subsistema de Instalação e Segurança
+                </TextBlock>
+                <TextBlock 
+                    FontFamily="Calibri" FontSize="16"
+                    FontWeight="Bold"
+                    Canvas.Left="415.599" Canvas.Top="45.026">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="Yellow" Opacity="0.3"/>
+                    </TextBlock.Foreground>
+                    Pré - Instalador
+                </TextBlock>
+                <TextBlock 
+                    TextWrapping="Wrap"
+                    Canvas.Left="133" Canvas.Top="73" Width="393.786">
+                    Bem vindo ao programa de instalação ou atualização
+                    de programas controlados da Justiça Eleitoral
+                </TextBlock>
             </Canvas>
+
+
         </Grid>
-       
+
         <!-- Fim Cabeçalho-->
-        
+
         <!-- Instruções -->
         <StackPanel Width="350"
                     HorizontalAlignment="Left"
@@ -42,7 +80,7 @@
             </TextBlock>
             <TextBlock>
             Selecione "Instalação via Rede(FTP) e clique em 
-                "Avançar>" para obter a lista dos programs disponíveis
+                "Avançar>" para obter a lista dos programas disponíveis
                 na rede.
 
             </TextBlock>
@@ -56,7 +94,7 @@
 
         <!-- Opções -->
         <StackPanel HorizontalAlignment="Left"
-                     Margin="50,0,0,0">
+                     Margin="50,10,0,-2">
             <StackPanel.Resources>
                 <Style TargetType="RadioButton">
                     <Setter Property="FontFamily" Value="Arial"/>
@@ -71,26 +109,36 @@
                          Height="25"/>
                 <Button Content="Procurar"
                         Height="25"
-                        Width="70"/>
+                        Width="70" Margin="7,0,0,0"/>
             </StackPanel>
         </StackPanel>
         <!-- Fim Opções-->
 
         <!-- Botões de Ação-->
-        <StackPanel Orientation="Horizontal" 
+        <Border         
+            Padding="10" Margin="0,5,0,0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCCCCCC" Offset="0"/>
+                    <GradientStop Color="#FF899A86" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Right"
                     Margin="0,30,10,0">
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Padding" Value="4"/>
-                    <Setter Property="Width" Value="70"/>
-                    <Setter Property="Margin" Value="5"/>
-                </Style>
-            </StackPanel.Resources>
-            <Button Content="&lt; Voltar"/>
-            <Button Content="Avançar &gt;"/>
-            <Button Content="Finalizar"/>
-        </StackPanel>
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Padding" Value="4"/>
+                        <Setter Property="Width" Value="70"/>
+                        <Setter Property="Margin" Value="5"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Content="&lt; Voltar"/>
+                <Button Content="Avançar &gt;"/>
+                <Button Content="Finalizar"/>
+            </StackPanel>
+        </Border>
+       
         <!-- Botões de Ação-->
     </StackPanel>
 </Window>
